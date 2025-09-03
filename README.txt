@@ -1,30 +1,97 @@
-# Consulta CEP ViaCEP - Web Scraping e API
+# Consulta CEP ViaCEP - Web Scraping, API e Power Automate
 
-Este projeto contém dois scripts em Python para consulta de dados de CEP usando o serviço [ViaCEP](https://viacep.com.br/):
-- Um script realiza a consulta via Web Scraping com Selenium.
-- Outro script realiza a consulta diretamente pela API ViaCEP com requests.
+Este projeto contém **3 formas** de consulta de CEP usando o serviço [ViaCEP](https://viacep.com.br/):
 
-## Requisitos
+---
 
+<details>
+<summary>1️⃣ Consulta via Web Scraping (Selenium)</summary>
+
+### Requisitos
 - Python 3.7+
-- [Pandas](https://pandas.pydata.org/docs/)
-- [Requests](https://requests.readthedocs.io/) (apenas para o script API)
-- [Selenium](https://selenium.dev/documentation/) (apenas para o script Selenium)
-- [ChromeDriver](https://chromedriver.chromium.org/downloads) compatível com seu navegador Chrome (apenas para o script Selenium)
+- Pandas
+- Selenium
+- ChromeDriver compatível com seu navegador Chrome
 
-## Instalação das dependências
-
+### Instalação
 ```bash
-pip install selenium pandas requests
+pip install selenium pandas
+```
 
-## Como executar
+### Como executar
+- Execute `consulta_viacep_scraping.py`
+- Digite um CEP (apenas números, ex: `01001000`)
+- O resultado será salvo em `Resultado_CEP_Scraping.csv`
 
-- Ao rodar qualquer um dos scripts, será solicitado que você digite um CEP (apenas números, ex: 01001000).
+</details>
 
-- O resultado será salvo em um arquivo CSV na mesma pasta:
-  Resultado_CEP_Scraping.csv para o script de scraping
-  Resultado_CEP_API.csv para o script de API
+---
 
-- Exemplo de CEP válido para teste: 01001000:
-  Dúvidas ou problemas? Verifique se as dependências estão corretamente instaladas e se o ChromeDriver está no PATH.
-  Em caso de erro com o CEP, certifique-se de informar exatamente 8 dígitos numéricos.
+<details>
+<summary>2️⃣ Consulta via API (Requests)</summary>
+
+### Requisitos
+- Python 3.7+
+- Pandas
+- Requests
+
+### Instalação
+```bash
+pip install requests pandas
+```
+
+### Como executar
+- Execute `consulta_viacep_api.py`
+- Digite um CEP (apenas números, ex: `01001000`)
+- O resultado será salvo em `Resultado_CEP_API.csv`
+
+</details>
+
+---
+
+<details>
+<summary>3️⃣ Consulta via Power Automate (Conector Personalizado)</summary>
+
+### Requisitos
+- Conta Microsoft Power Automate
+- Arquivos do projeto:
+  - `viacep_custom_connector.json`
+  - `viacep_flow-power-automate.zip`
+
+### Importando o conector
+- Vá em **Data > Conectores Personalizados > Importar do arquivo JSON**
+- Selecione `viacep_custom_connector.json`
+- Salve e crie a conexão
+
+### Importando o fluxo
+- Vá em **Meus fluxos > Importar**
+- Selecione `viacep_flow-power-automate.zip`
+- Configure para usar o conector importado
+
+### Executando
+- Clique em **Executar**
+- Digite um CEP (apenas números, ex: `01001000`)
+- O fluxo retorna os dados do endereço:
+
+```
+CEP: 01001-000
+Logradouro: Praça da Sé
+Complemento: lado ímpar
+Bairro: Sé
+Localidade: São Paulo
+UF: SP
+```
+
+</details>
+
+---
+
+## Observações
+
+- Os 3 métodos funcionam como alternativas complementares.  
+- Power Automate permite integração nativa com Excel, Teams, SharePoint etc.  
+- Exemplo de CEP válido: `01001000`.  
+- Caso haja erro:
+  - **Scraping**: verifique dependências e se o ChromeDriver está no PATH  
+  - **API**: confirme conexão com a internet  
+  - **Power Automate**: confira se o conector personalizado foi configurado corretamente  
