@@ -5,7 +5,7 @@ Este projeto contém **3 formas** de consulta de CEP usando o serviço [ViaCEP](
 ---
 
 <details>
-<summary>1️⃣ Consulta via Web Scraping (Selenium)</summary>
+<summary>1️⃣ Consulta via Web Scraping (Python + Selenium)</summary>
 
 ### Requisitos
 - Python 3.7+
@@ -28,7 +28,7 @@ pip install selenium pandas
 ---
 
 <details>
-<summary>2️⃣ Consulta via API (Requests)</summary>
+<summary>2️⃣ Consulta via API (Python + Requests)</summary>
 
 ### Requisitos
 - Python 3.7+
@@ -89,9 +89,9 @@ UF: SP
 ## Observações
 
 - Os 3 métodos funcionam como alternativas complementares.  
-- Power Automate permite integração nativa com Excel, Teams, SharePoint etc.  
 - Exemplo de CEP válido: `01001000`.  
 - Caso haja erro:
   - **Scraping**: verifique dependências e se o ChromeDriver está no PATH  
   - **API**: confirme conexão com a internet  
   - **Power Automate**: confira se o conector personalizado foi configurado corretamente  
+
