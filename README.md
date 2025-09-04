@@ -70,17 +70,17 @@ Conector Personalizado 🔌
 ### Requisitos
 - Conta Microsoft Power Automate
 - Arquivos do projeto:
-  - `viacep_custom_connector.json`
-  - `viacep_flow-power-automate.zip`
+  - `ViaCEP.swagger.json`
+  - `consulta_viacep_flow-power-automate.zip`
 
 ### Importando o conector
 - Vá em **Data > Conectores Personalizados > Importar do arquivo JSON**
-- Selecione `viacep_custom_connector.json`
+- Selecione `ViaCEP.swagger.json`
 - Salve e crie a conexão
 
 ### Importando o fluxo
 - Vá em **Meus fluxos > Importar**
-- Selecione `viacep_flow-power-automate.zip`
+- Selecione `consulta_viacep_flow-power-automate.zip`
 - Configure para usar o conector importado
 
 ### Executando
@@ -109,6 +109,7 @@ UF: SP
   - **Scraping**: verifique se ChromeDriver está instalado na versão compatível ao Chrome   
   - **Power Automate**: aceite todas as permissões ao importar o conector personalizado e ao rodar o fluxo
   
+
 
 
 
