@@ -6,8 +6,11 @@ Este projeto contém **3 formas** de consulta de CEP usando o serviço [ViaCEP](
 
 <details>
 <summary>
+Consulta via API 
 <img src="https://img.icons8.com/color/96/python.png" width="20"/>
-Consulta via API → → → (Python + Requests)</summary>
+Python + Requests
+<img src="https://img.icons8.com/color/48/flash-on.png" width="15"/>
+</summary>
 
 ### Requisitos
 - Python 3.7+
@@ -30,8 +33,10 @@ pip install requests pandas
 
 <details>
 <summary>
+Consulta via Web Scraping 
 <img src="https://img.icons8.com/color/96/python.png" width="20"/>
-Consulta via Web Scraping → → → (Python + Selenium)
+Python + Selenium
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" width="15"/>
 </summary>
 
 ### Requisitos
@@ -55,8 +60,10 @@ pip install selenium pandas
 ---
 
 <details>
-<summary><img src="https://img.icons8.com/fluency/96/microsoft-power-automate-2020.png" width="20"/> 
-Consulta via Power Automate → → → (Conector Personalizado)
+<summary> 
+Consulta via Power Automate 
+<img src="https://img.icons8.com/fluency/96/microsoft-power-automate-2020.png" width="20"/>
+Conector Personalizado 🔌
 
 </summary>
 
@@ -102,6 +109,7 @@ UF: SP
   - **Scraping**: verifique se ChromeDriver está instalado na versão compatível ao Chrome   
   - **Power Automate**: aceite todas as permissões ao importar o conector personalizado e ao rodar o fluxo
   
+
 
 
 
