@@ -7,6 +7,30 @@ Este projeto contém **3 formas** de consulta de CEP usando o serviço [ViaCEP](
 <details>
 <summary>
 <img src="https://img.icons8.com/color/96/python.png" width="20"/>
+Consulta via API → → → (Python + Requests)</summary>
+
+### Requisitos
+- Python 3.7+
+- Pandas
+- Requests
+
+### Instalação
+```bash
+pip install requests pandas
+```
+
+### Como executar
+- Execute `consulta_viacep_api.py`
+- Digite um CEP (apenas números, ex: `01001000`)
+- O resultado será salvo em `Resultado_CEP_API.csv`
+
+</details>
+
+---
+
+<details>
+<summary>
+<img src="https://img.icons8.com/color/96/python.png" width="20"/>
 Consulta via Web Scraping → → → (Python + Selenium)
 </summary>
 
@@ -25,30 +49,6 @@ pip install selenium pandas
 - Execute `consulta_viacep_scraping.py`
 - Digite um CEP (apenas números, ex: `01001000`)
 - O resultado será salvo em `Resultado_CEP_Scraping.csv`
-
-</details>
-
----
-
-<details>
-<summary>
-<img src="https://img.icons8.com/color/96/python.png" width="20"/>
-Consulta via API → → → (Python + Requests)</summary>
-
-### Requisitos
-- Python 3.7+
-- Pandas
-- Requests
-
-### Instalação
-```bash
-pip install requests pandas
-```
-
-### Como executar
-- Execute `consulta_viacep_api.py`
-- Digite um CEP (apenas números, ex: `01001000`)
-- O resultado será salvo em `Resultado_CEP_API.csv`
 
 </details>
 
@@ -96,14 +96,13 @@ UF: SP
 
 ---
 
-## Observações
+## Caso haja erro:
 
-- Os 3 métodos funcionam como alternativas complementares.  
-- Exemplo de CEP válido: `01001000`.  
-- Caso haja erro:
-  - **Scraping**: verifique dependências e se o ChromeDriver está no PATH  
-  - **API**: confirme conexão com a internet  
-  - **Power Automate**: confira se o conector personalizado foi configurado corretamente  
+  - **API**: confira se há conexão com a internet ativa 
+  - **Scraping**: verifique se ChromeDriver está instalado na versão compatível ao Chrome   
+  - **Power Automate**: aceite todas as permissões ao importar o conector personalizado e ao rodar o fluxo
+  
+
 
 
 
