@@ -1,4 +1,4 @@
-# Consulta CEP ViaCEP - Web Scraping, API e Power Automate
+# Consulta ViaCEP - Web Scraping, API e Power Automate
 
 Este projeto contém **3 formas** de consulta de CEP usando o serviço [ViaCEP](https://viacep.com.br/):
 
@@ -104,6 +104,7 @@ UF: SP
   - **Scraping**: verifique dependências e se o ChromeDriver está no PATH  
   - **API**: confirme conexão com a internet  
   - **Power Automate**: confira se o conector personalizado foi configurado corretamente  
+
 
 
 
